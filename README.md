@@ -69,3 +69,5 @@ Lastly, the `<module role="org.fcrepo.server.resourceIndex.ResourceIndex"/>` sec
         </param>
         …
     </module>
+
+**Note**: Rebuilding the Fedora resource index ***does not*** clear the triplestore beforehand.  You are advised to manually clear the triplestore after shutting down Fedora, but before running the `fedora-rebuild` command, using Sparql Graph Store HTTP [DELETE](https://www.w3.org/TR/sparql11-http-rdf-update/#http-delete) or the statement `DROP GRAPH <info:edu.si.fedora#ri>`.
